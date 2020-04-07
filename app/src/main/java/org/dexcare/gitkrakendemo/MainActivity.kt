@@ -15,8 +15,6 @@ class MainActivity : AppCompatActivity() {
     private fun doingSomeWork(){
         (0..100).map {
             it * 2
-        }.map {
-            it.toString()
         }.forEach {
             val message = "current value: $it"
             Log.wtf("TEST", message)
