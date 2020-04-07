@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         doingSomeWork()
+        justAnotherFun()
     }
 
     private fun doingSomeWork(){
@@ -19,5 +20,12 @@ class MainActivity : AppCompatActivity() {
             val message = "current value: $it"
             Log.wtf("TEST", message)
         }
+    }
+
+    private fun justAnotherFun(){
+        "someString*anotherString*moreStrings".split("*")
+                .forEach {
+                    Log.wtf("TEST", it)
+                }
     }
 }
