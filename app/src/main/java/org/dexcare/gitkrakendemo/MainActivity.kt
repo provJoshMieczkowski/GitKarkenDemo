@@ -1,8 +1,8 @@
 package org.dexcare.gitkrakendemo
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,12 +12,12 @@ class MainActivity : AppCompatActivity() {
         doingSomeWork()
     }
 
-    private fun doingSomeWork(){
+    private fun doingSomeWork() {
         (0..100).map {
             it * 2
         }.map {
-            it.toString()
-        }.forEach {
+            it * it
+        }.sortedDescending().forEach {
             val message = "current value: $it"
             Log.wtf("TEST", message)
         }
